@@ -44,7 +44,9 @@
 <div ng-controller="AccountCtrl" class="noTouch InitializeHomeFeedSpinnerStep ModalFirstBoardIntroStep">
     <view-board></view-board>
     <view-post></view-post>
+
     <div class="container">
+
         <div style="display:none">{{message}}</div>
         <div data-component-type="17" class="App full AppBase Module">
             <account-other></account-other>
@@ -53,6 +55,7 @@
                 <div class="UserProfilePage ajax Module" style="min-height: 314px;">
                     <div class="HeroHelperBase ajax HeroBasic Module">
                     </div>
+
                         <account-header></account-header>
 
 
@@ -62,6 +65,11 @@
 
                         <div class="tab-pane active" id="boards">
 
+                            <div ng-controller="AddPostCtrl">
+                                <button class="btn btn-primary btn-lg" ng-click="openMod()">
+                                    Add Post
+                                </button>
+                            </div>
                             <acc-boardlist></acc-boardlist>
 
                         </div>

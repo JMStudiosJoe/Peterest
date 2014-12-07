@@ -19,7 +19,7 @@ app.controller('AddPostCtrl', function ($location, $scope, $modal)
     {
         console.log("We're in the right place");
         console.log("$modal = ", $modal);
-        $scope.modalInstance = $modal.open({templateUrl: "../views/directives/addPostModalDirective.html",
+        $scope.modalInstance = $modal.open({templateUrl: "../views/directives/addNewPostModalDirective.html",
             controller: "modal_helper",
             resolve:{
                 availableActionsOfAnimals: function () {
