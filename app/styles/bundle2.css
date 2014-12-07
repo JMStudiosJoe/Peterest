@@ -1,0 +1,404 @@
+.Board .hoverMask {
+	-webkit-transition:background 0.04s linear;
+	transition:background 0.04s linear;
+	border-radius:3px;
+	box-shadow:0 0 2px rgba(0,0,0,0.33) inset;
+	bottom:0;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0;
+	z-index:100;
+}
+.ielt10 .Board .hoverMask {
+	display:none !important;
+}
+.Board .boardLinkWrapper:hover .hoverMask {
+	background:rgba(255,255,255,0.08);
+}
+.Board .boardLinkWrapper:active .hoverMask {
+	background:rgba(0,0,0,0.08);
+}
+.Board .thumbImageWrapper {
+	position:relative;
+	width:50px;
+}
+.Board .thumbImageWrapper:after {
+	border-radius:3px;
+	box-shadow:0 0 2px rgba(0,0,0,0.33) inset;
+	content:" ";
+	height:50px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:50px;
+}
+.Board .thumbImageWrapper img {
+	border-radius:3px;
+	height:50px;
+	width:50px;
+}
+.Board .boardName {
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	white-space:nowrap;
+	overflow:hidden;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	color:#555;
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	height:18px;
+	line-height:18px;
+	margin:0 3px 6px;
+	position:relative;
+	height:auto;
+}
+.Board .boardName.hasBoardContext {
+	margin-left:0;
+}
+.Board.boardCoverImage {
+	border-radius:6px;
+	box-shadow:0 1px 2px 0 rgba(0,0,0,0.22);
+	background:#fff;
+	position:relative;
+}
+.Board.closeupBottomView {
+	float:left;
+	width:216px;
+}
+.Board.closeupBottomView .boardLink {
+	float:none;
+}
+.Board.closeupBottomView .Button {
+	float:right;
+	font-size:12px;
+	margin-top:10px;
+	padding-left:15px;
+	padding-right:15px;
+}
+.Board.closeupBottomView .boardRepSubtitle {
+	color:#333;
+	font-size:16px;
+	font-weight:bold;
+	line-height:16px;
+	white-space:nowrap;
+	overflow:hidden;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	max-width:158px;
+}
+.Board.closeupBottomView .boardRepTitle {
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	color:#999;
+	font-size:13px;
+	font-weight:bold;
+	line-height:13px;
+	white-space:nowrap;
+	overflow:hidden;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	margin:7px 0 7px;
+	max-width:158px;
+}
+.Board.closeupBottomView .thumbImageWrapper {
+	border-radius:6px;
+	float:left;
+	margin-right:15px;
+}
+.Board.boardCoverImage {
+	width:236px;
+}
+.Board.boardCoverImage.noContext {
+	height:284px;
+}
+.noTouch .Board.boardCoverImage:hover .boardCoverEditWrapper {
+	visibility:visible;
+}
+.Board.boardCoverImage .boardFollowUnfollowButton,.Board.boardCoverImage .boardEditButton {
+	bottom:10px;
+	left:10px;
+}
+.Board.boardCoverImage .boardLinkWrapper {
+	display:block;
+	padding:10px;
+}
+.Board.boardCoverImage .boardLinkWrapper:hover .boardCoverEditWrapper {
+	visibility:visible;
+}
+.Board.boardCoverImage img {
+	border-radius:2px;
+}
+.Board.boardCoverImage a {
+	color:#555;
+	display:block;
+	position:relative;
+}
+.Board.boardCoverImage .BoardIcons {
+	float:right;
+}
+.Board.boardCoverImage .boardCoverWrapper,.Board.boardCoverImage .boardThumbs li {
+	background-color:#eee;
+}
+.Board.boardCoverImage .boardCoverWrapper {
+	position:relative;
+	overflow:hidden;
+	clear:both;
+	height:146px;
+	width:216px;
+}
+.Board.boardCoverImage .boardCoverWrapper:after {
+	border-radius:3px;
+	box-shadow:0 0 2px rgba(0,0,0,0.33) inset;
+	content:" ";
+	height:146px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:216px;
+}
+.Board.boardCoverImage .boardCoverWrapper .boardCover {
+	border-radius:3px;
+	height:146px;
+	width:216px;
+}
+.Board.boardCoverImage .boardPinCount {
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	border-radius:2px;
+	box-shadow:inset 0 0 5px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0.3);
+	text-shadow:0 -1px 0 rgba(0,0,0,0.7);
+	background-color:#000;
+	background-color:rgba(68,68,68,0.7);
+	bottom:3px;
+	color:#fff;
+	padding:3px 6px;
+	position:absolute;
+	right:3px;
+}
+.Board.boardCoverImage .boardThumbs .thumb {
+	width:51px;
+	height:51px;
+	background:url('/webapp/style/sprites/webapp-desktop-main-1x.22dbd71f.png') -200px -271px no-repeat;
+}
+.Board.boardCoverImage .boardThumbs li {
+	position:relative;
+	display:inline;
+	float:left;
+	height:51px;
+	margin-left:4px;
+	position:relative;
+	width:51px;
+}
+.Board.boardCoverImage .boardThumbs li:after {
+	border-radius:3px;
+	box-shadow:0 0 2px rgba(0,0,0,0.33) inset;
+	content:" ";
+	height:51px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:51px;
+}
+.Board.boardCoverImage .boardThumbs li .thumb {
+	border-radius:3px;
+	height:51px;
+	width:51px;
+}
+.Board.boardCoverImage .boardThumbs li:first-child {
+	margin-left:0;
+}
+.Board.boardCoverImage ul {
+	height:51px;
+	margin:4px 0 8px 0;
+}
+.Board.boardCoverImage .Button {
+	width:216px;
+}
+.Board.boardCoverImage .boardCoverEditWrapper {
+	position:absolute;
+	text-align:center;
+	top:100px;
+	visibility:hidden;
+	width:100%;
+}
+.Board.boardCoverImage .boardCoverEditButton {
+	background-color:#f3f3f3;
+	background:-webkit-linear-gradient(#fff,#e7e7e7);
+	background:linear-gradient(#fff,#e7e7e7);
+	border:1px solid #aaa;
+	font-size:12px;
+	height:27px;
+	padding:5px 9px;
+	text-shadow:-1px 1px 1px rgba(255,255,255,0.77);
+	width:auto;
+	z-index:101;
+}
+.Board.selectable {
+	cursor:pointer;
+}
+.Board.selectable:hover {
+	box-shadow:0 0 8px 0 rgba(0,0,0,0.3);
+}
+.Board.selectable:active {
+	box-shadow:0 0 0 1px rgba(0,0,0,0.13);
+	background-color:#f3f3f3;
+}
+.Board.boardPinsGrid {
+	border-radius:6px;
+	box-shadow:0 1px 2px 0 rgba(0,0,0,0.22);
+	background:#fff;
+	display:block;
+	padding:10px;
+	background:#fff;
+	max-height:552px;
+	max-width:236px;
+}
+.Board.boardPinsGrid.error {
+	padding:10px;
+}
+.Board.boardPinsGrid.noShadow .boardHeader,.Board.boardPinsGrid.noShadow .pinGridWrapper {
+	background:#fff;
+}
+.Board.boardPinsGrid .boardHeader {
+	overflow:hidden;
+	background:url('/webapp/style/app/desktop/images/boardPinsGridShadowTop.232a2e57.png') repeat-x bottom left;
+	padding-bottom:11px;
+}
+.Board.boardPinsGrid .BoardIcons {
+	float:right;
+	padding:4px 4px 0;
+}
+.Board.boardPinsGrid .pinGridWrapper {
+	overflow-x:hidden;
+	-webkit-overflow-scrolling:touch;
+	overflow-y:scroll;
+	background:url('/webapp/style/app/desktop/images/boardPinsGridShadowBottom.bbcac9fc.png') repeat-x left bottom;
+	height:auto;
+	max-height:459px;
+	position:relative;
+	top:-2px;
+}
+.Board.boardPinsGrid .pinGridWrapper .Grid {
+	margin:0;
+	width:216px;
+}
+.Board.boardPinsGrid .pinGridWrapper .Grid.loading {
+	height:459px;
+}
+.Board.boardPinsGrid .pinGridWrapper .item {
+	margin:0 3px 3px 0;
+	opacity:0.5;
+}
+.Board.boardPinsGrid .pinGridWrapper .item:hover,.Board.boardPinsGrid .pinGridWrapper .item.activeItem {
+	opacity:1;
+}
+.Board.boardPinsGrid .pinGridWrapper .item:hover .hoverMask,.Board.boardPinsGrid .pinGridWrapper .item.activeItem .hoverMask {
+	box-shadow:0 0 2px rgba(0,0,0,0.33) inset;
+	-webkit-transition-property:box-shadow;
+	transition-property:box-shadow;
+	-webkit-transition-duration:0.2s;
+	transition-duration:0.2s;
+}
+.Board.follow_view {
+	font-size:11px;
+	line-height:1.2em;
+	padding:5px 14px;
+	position:relative;
+}
+.Board.follow_view:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+.Board.follow_view .boardFollowImg {
+	border-radius:2px;
+	float:left;
+	height:30px;
+	margin-right:5px;
+	width:30px;
+}
+.Board.follow_view:hover {
+	background:#f3f3f3;
+}
+.Board.follow_view:hover .dismiss {
+	width:9px;
+	height:10px;
+	background:url('/webapp/style/sprites/webapp-desktop-main-1x.22dbd71f.png') -634px -374px no-repeat;
+	cursor:pointer;
+	position:absolute;
+	right:0;
+	top:40%;
+	margin-right:14px;
+}
+@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi) {
+	.Board.follow_view:hover .dismiss {
+		background-image:url('/webapp/style/sprites/webapp-desktop-main-2x.c6184556.png');
+		background-position:-519px -445px;
+		background-size:529px 521px;
+	}
+}
+.Board.follow_view .BoardFollowButton {
+	color:#cb2027;
+}
+.Board.follow_view .BoardFollowButton:hover {
+	text-decoration:underline;
+}
+.Board.follow_view .BoardFollowButton.disabled {
+	color:#717171;
+}
+.Board.follow_view .BoardFollowButton.disabled:hover {
+	cursor:default;
+	text-decoration:none;
+}
+.Board.follow_view .followBoardName {
+	white-space:nowrap;
+	overflow:hidden;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	width:75%;
+}
+.Board.follow_view .followBoardName a {
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	color:#717171;
+	font-size:11px;
+	font-weight:700;
+}
+.Board.follow_view .followConfirmation {
+	white-space:nowrap;
+	overflow:hidden;
+	-ms-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	background-color:#ffa;
+	bottom:0;
+	display:none;
+	left:0;
+	padding:10px;
+	position:absolute;
+	right:0;
+	top:0;
+}
+.Board.follow_view.followed .followConfirmation {
+	display:block;
+}
+.Board.follow_view:before {
+	box-shadow:none;
+}
+.Board.follow_view:hover .dismiss {
+	display:block;
+}
+.Board .debugMacro {
+	padding:2px;
+}
+.Board.noButton {
+	height:265px;
+}
+.Board.noButton .BoardFollowButton.Button {
+	display:none;
+}
+.BoardEditBase .standardForm h1 {
+	padding-right:42px;
+}

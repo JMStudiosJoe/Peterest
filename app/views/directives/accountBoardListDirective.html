@@ -1,0 +1,38 @@
+
+    <!--class="padItems Module centeredWithinWrapper fixedHeightLayout ajax GridItems ui-sortable" ng-click="openMod()"     data-toggle="modal" data-target="#addPostModal"-->
+    <div ng-controller="AddPostCtrl">
+        <button style="float:right" class="btn btn-primary btn-lg JMS-addSpace" ng-click="openMod()"    >
+            Add Post
+        </button>
+        <add-post></add-post>
+    </div>
+
+    <div class="pin-layout" >
+        <create-board class="thumbnail" style="margin-right:50px;"></create-board>
+        <div ng-repeat="board in boardList">
+            <div class="item ui-draggable ui-draggable-disabled ui-state-disabled gridSortable thumbnail" aria-disabled="true">
+                <div data-component-type="1" class="noContext Module draggable ajax Board boardCoverImage">
+                    <div class="BoardIcons ajax Module">
+                        <h3 class="boardName">
+                            {{board.name}}
+                        </h3>
+                    </div>
+                    <!-- data-target="#viewSelectedBoardModal" -->
+                    <div data-toggle="modal" ng-click="viewPostsInBoard($index)" class="boardCoverWrapper">
+                        <img src="" class="boardCover" style="" alt="{{board.name}} / {{board.description}}" />
+                        <img src="" class="boardCover" alt="{{board.name}} / {{board.description}} / by {{board.createdBy}}" />
+                        <div class="PinCount ajax Module">
+                                                        <span class="boardPinCount">
+                                                            <span class="value">0</span>
+                                                            <span class="label">Pins</span>
+                                                        </span>
+                        </div>
+                    </div>
+                    <ul class="boardThumbs"></ul>
+                    <button type="button" class="rounded ShowModalButton Button hasText Module boardEditButton ajax btn">
+                        <span class="buttonText">Edit</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

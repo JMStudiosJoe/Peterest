@@ -1,0 +1,46 @@
+
+    {{test}}
+    <input type="file" id="animalPhoto" class="btn btn-lg btn-primary">
+
+    <div>
+        <input type="text" id="addPostContents_nameOfPost">
+    </div>
+    <div>
+        <textarea id="addPostContents_descriptionOfPost">Description of animal</textarea>
+    </div>
+
+    <br>
+    <div ng-repeat="board in userBoards">
+
+
+        <span ng-click="userSelectsBoardToPinPost( $index )">{{board.attributes.name}}</span>
+
+    </div>
+    <br>
+    <!--<button ng-click="getCatOfSelAnimals()">Get Data</button>-->
+    <br>
+    <div class="JMS-addCategoryTags">
+        <div  ng-repeat="catOfAnimal in availableCategoriesOfAnimals">
+
+
+            <input type="checkbox" id="addPostContents_categoryOfAnimal{{$index}}" ng-click="addSelectedCategory( $index )">{{catOfAnimal.attributes.name}}
+
+        </div>
+    </div>
+
+    <br>
+    <h3 class="JMS-actionTitle">Actions</h3>
+    <br>
+    <div class="JMS-addActionTags">
+        <div ng-repeat="actionsOfAnimal in availableActionsOfAnimals">
+
+
+            <input type="checkbox" id="addPostContents_actionsOfAnimal{{$index}}" ng-click="addSelectedAction( $index )">{{actionsOfAnimal.attributes.name}}
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="close_modal()">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="createNewPost()">Save changes</button>
+    </div>
+

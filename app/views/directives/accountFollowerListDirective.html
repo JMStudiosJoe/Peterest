@@ -1,0 +1,13 @@
+
+    {{username}}'s Followers
+    <div class="col-md-12 text-center">
+        <div class="pin-layout">
+            <!--<button ng-click='loadFollowing()'>Fill Following</button>-->
+            <!-- class="deckgrid JMS-likePostDeckgrid" -->
+            <div ng-repeat="follower in followersList">
+                <div class="thumbnail">
+                    <h3 class="ng-binding" ng-click="viewSelectedFollowerUserBoards( $index )">{{follower.username}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>

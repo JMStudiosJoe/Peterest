@@ -1,0 +1,36 @@
+<div class="modal fade" id="viewSelectedBoardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h1>{{testForViewBoard}}</h1>
+                {{postsInBoard.length}}
+            </div>
+            <div class="modal-body" >
+                <div ng-repeat="post in postsInBoard">
+                    <!-- class="photo ng-scope" -->
+                    <div class="thumbnail">
+
+                        <!--<div class="photo-wrapper">-->
+
+                        <img src="{{post.image}}" data-ng-src="{{post.image}}" class="animation-fade animation-faded" ng-click="viewSelectedPost( post )" data-imageloaded="" data-loadedclass="animation-faded" data-toggle="modal" data-target="#viewPostModal">
+
+                        <!--</div>
+
+                        <div class="photo-description">-->
+
+                        <h3 class="ng-binding">{{post.name}}</h3>
+                        <p class="ng-binding">{{post.description}}</p>
+                        <br>
+
+
+
+                        <!--</div>
+                        <!--</a>-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

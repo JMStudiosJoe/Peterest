@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>PetPinterest</title>
+    <script src="//www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- endbuild -->
+    <script>
+        Parse.initialize("tpXum9bDKsYU5fWMR9nKsD2W9Y97VY6PEkdCNZZC", "rH6f6fEncHvsXGzNrG9wsqOKpcKIoCxVnhUpbcwP");
+
+    </script>
+    <script>
+        Parse.initialize("tpXum9bDKsYU5fWMR9nKsD2W9Y97VY6PEkdCNZZC", "rH6f6fEncHvsXGzNrG9wsqOKpcKIoCxVnhUpbcwP");
+
+        Parse.Cloud.run('filterPosts', {},
+                {
+                    success: function(result)
+                    {
+
+                        console.log(result);
+                    },
+                    error: function(error)
+                    {
+                        console.log( error.message);
+                    }
+                });
+
+    </script>
+</head>
+<body ng-app="peterestApp">
+<div ng-controller="DashCtrl">
+    <dash-header></dash-header>
+    <rec-list></rec-list>
+    <lost-posts></lost-posts>
+    <search-results></search-results>
+
+    <div class="JMS-addPost">
+
+
+        <view-post></view-post>
+        <pin-post></pin-post>
+
+    </div>
+</div>
+
+
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="../../bower_components/es5-shim/es5-shim.js"></script>
+<script src="../../bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../../bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="../../bower_components/angular-resource/angular-resource.js"></script>
+<script src="../../bower_components/angular-route/angular-route.js"></script>
+<script src="../../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../../bower_components/angular-touch/angular-touch.js"></script>
+<script src="../../bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="../../bower_components/lodash/dist/lodash.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="../scripts/app.js"></script>
+
+<script src="../scripts/controllers/dashboardCtrl.js"></script>
+<script src="../scripts/controllers/viewPost.js"></script>
+<script src="../scripts/controllers/pinPostCtrl.js"></script>
+
+
+
+<script src="../scripts/directives/dashboardHeaderDirecitve.js"></script>
+<script src="../scripts/directives/recommendationsDirective.js"></script>
+<script src="../scripts/directives/lostAnimalsDirective.js"></script>
+<script src="../scripts/directives/searchResultsDirective.js"></script>
+<script src="../scripts/directives/viewPostModalDirective.js"></script>
+<script src="../scripts/directives/pinPostToBoardDirective.js"></script>
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<!-- endbuild -->
+</body>
+</html>

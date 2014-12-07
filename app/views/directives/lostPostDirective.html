@@ -1,0 +1,19 @@
+<div id="lostAnimalDiv">
+    <h1>Lost Animal Posts</h1>
+
+    <div id="moj-board" class="col-md-12 text-center">
+        <div class="pin-layout">
+            <!--<button ng-click='loadLikedPosts()'>Fill Liked Posts</button>-->
+            <div ng-repeat="lostPost in postLostAnimals">
+                <div class="thumbnail">
+                    <!--<img id="moj-pin" src=" http://www.clipartbest.com/cliparts/LiK/pEM/LiKpEMaia.png">-->
+                    <img  src="{{lostPost.image}}" data-ng-src="{{lostPost.image}}" ng-click="viewOnMap(lostPost.lastKnown, $index )"  data-imageloaded="" data-loadedclass="animation-faded" data-toggle="modal" data-target="#viewPostModal">
+                    <h3 class="ng-binding">{{lostPost.name}}</h3>
+                    <p class="ng-binding">{{lostPost.description}}</p>
+                    <br>
+                    <button class="ng-binding" data-loadedclass="animation-faded" data-toggle="modal" data-target="#viewPostModal" ng-click="viewOnMap(lostPost.lastKnown, $index)">{{lostPost.lastKnown}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

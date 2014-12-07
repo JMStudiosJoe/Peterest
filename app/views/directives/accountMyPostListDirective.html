@@ -1,0 +1,15 @@
+
+    {{username}}'s Pins
+    <div class="col-md-12 text-center">
+        <div class="pin-layout">
+            <!--<button ng-click='loadLikedPosts()'>Fill My Posts</button>-->
+            <!-- class="deckgrid JMS-likePostDeckgrid" -->
+            <div ng-repeat="myPost in myPostList">
+                <div class="thumbnail">
+                    <img src="{{myPost.image}}" ng-click="viewSelectedMyPost($index)" data-ng-src="{{myPost.image}}" data-toggle="modal" data-target="#viewPostModal"  data-imageloaded="" data-loadedclass="animation-faded">
+                    <h3 class="ng-binding">{{myPost.name}}</h3>
+                    <p class="ng-binding">{{myPost.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,78 @@
+<div class="item ui-draggable ui-draggable-disabled ui-state-disabled" aria-disabled="true">
+    <a data-toggle="modal" data-target="#createBoardModal"class="ajax BoardCreateRep Module">
+        <span>Create a board</span>
+    </a>
+</div>
+
+<!--Needs to be in its own directive, Joey tried but wasn't working possibly scoping issues-->
+<div class="modal fade" id="createBoardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="CreateBoardCtrl as create">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" >Create Board</h4>
+            </div>
+            <div class="modal-body">
+                <div class="ajax BoardEditBase Module BoardCreate inModal">
+                    <form class="form-horizontal" role="form" method="post">
+                        <h1>
+                            <strong>Create a Board</strong>
+                        </h1>
+                        <div class="form-group">
+                            <h3>
+                                <label for="boardName" class="col-sm-2 control-label">Name</label>
+                            </h3>
+                            <div class="col-sm-10">
+                                <input id="boardName" name="name" class="form-control" type="text" autofocus="" placeholder="Like “Cute kittens” or “Adorable puppies.”" value="" style="width: 90%;" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h3>
+                                <label for="boardDescription" class="col-sm-2 control-label">Description</label>
+                            </h3>
+                            <div class="col-sm-10">
+                                <textarea id="boardDescription" class="boardDescription form-control" name="description" style="width: 90%;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h3>
+                                <label for="boardCategory" class="col-sm-2 control-label">Category</label>
+                            </h3>
+                            <div class="col-sm-10">
+                                <select class="ajax CategoriesSelect ui-Select Module selectpicker" name="category" class="form-control" id="boardCategory">
+                                    <span class="caret"></span>
+                                    <option value="other">
+                                        What kind of board is it?
+                                    </option>
+                                    <option value="Cats">
+                                        Cats
+                                    </option>
+                                    <option value="Dogs">
+                                        Dogs
+                                    </option>
+                                    <option value="Kittens">
+                                        Kittens
+                                    </option>
+                                    <option value="Puppies">
+                                        Puppies
+                                    </option>
+                                    <option value="Turtles">
+                                        Turtles
+                                    </option>
+                                    <option value="other">
+                                        Other
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" ng-click="createNewBoard()">Create Board</button>
+            </div>
+        </div>
+
+    </div>
+</div>

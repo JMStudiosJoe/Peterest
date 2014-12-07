@@ -1,0 +1,17 @@
+
+    {{username}}'s Likes
+    <div class="col-md-12 text-center">
+        <div class="pin-layout">
+            <!--<button ng-click='loadLikedPosts()'>Fill Liked Posts</button>-->
+            <!-- class="deckgrid JMS-likePostDeckgrid" -->
+            <div ng-repeat="likedPost in likedPostList">
+                <div class="thumbnail">
+                    <img src="{{likedPost.image}}" ng-click="viewSelectedLikedPost($index)" data-ng-src="{{likedPost.image}}" data-toggle="modal" data-target="#viewPostModal"  data-imageloaded="" data-loadedclass="animation-faded">
+                    <h3 class="ng-binding">{{likedPost.name}}</h3>
+                    <p class="ng-binding">{{likedPost.description}}</p>
+                    <br>
+                    <span class="ng-binding">{{likedPost.createdBy}}</span>
+                </div>
+            </div>
+        </div>
+    </div>

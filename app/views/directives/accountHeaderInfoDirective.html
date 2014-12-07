@@ -1,0 +1,41 @@
+<div class="guided UserProfileHeader ajax Module profileHeader">
+    <div class="centeredWithinWrapper gridWidth headerSizer">
+        <div class="header" itemscope="" itemtype="http://schema.org/Person">
+            <div class="fixedHeader">
+                <div class="titleBar centeredWithinWrapper gridWidth">
+                    <br>
+                    <br>
+                    <div class="fixedHeaderNameAndImage" style="bottom: 70px;">
+                        <div class="fixedHeaderName" itemprop="name">
+                            {{username}}
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button ng-click="editUserCategoriesAndActions()" type="button" data-loadedclass="animation-faded" data-toggle="modal" data-target="#addCategoriesAndActions" class=" ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                            <span class="buttonText" >Add Categories</span>
+                        </button>
+                        <button type="button" class="editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                            <span class="buttonText">Edit Profile</span>
+                        </button>
+                        <a href="dashboard.html"><h1>Dashboard</h1></a>
+
+                    </div>
+
+                </div>
+                <div class="divider centeredWithinWrapper gridWidth">
+                    <hr />
+                </div>
+            </div>
+            <div class="profileInfo">
+                <div class="aboutBar">
+                    <div class="about">
+                        <div class="name">
+                            {{username}}
+                        </div>
+                        <div class="iconsLinksEtc"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

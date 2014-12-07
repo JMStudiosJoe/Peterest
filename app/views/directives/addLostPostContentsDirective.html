@@ -1,0 +1,88 @@
+
+
+    <h1>Post For a Lost Animal</h1>
+    <div ng-show="checkTab(1)">
+        <div class="JMS-lostAnimalFileUpload">
+            <input type="file" id="addLostAnimalContents_fileUpload">
+            <span>image goes here</span>
+        </div>
+        <br>
+        <div class="JMS-lostAnimalNameAndReward">
+            <span>Animal Name: </span><input type="text" id="addLostAnimalContents_nameOfAnimal"><br>
+            <span>Reward: </span><input type="number" id="addLostAnimalContents_rewardForAnimal"><br>
+        </div>
+        <div class="JMS-lostAnimalCategory">
+            <h3>Category of Animal</h3><br>
+            <div  ng-repeat="category in categorysOfAnimals">
+                <input type="radio" name="categoryOfAnimal" ng-click="selectedCategory( category )"> {{category}}
+            </div>
+        </div>
+        <div class="JMS-lostAnimalColorOptions">
+            <span>Color 1: </span><input type="text" id="addLostAnimalContents_color1" ng-click="selectColor('Blue')"><br>
+            <span>Color 2: </span><input type="text" id="addLostAnimalContents_color2" ng-click="selectColor('Brown')"><br>
+            <span>Color 3: </span><input type="text" id="addLostAnimalContents_color3" ng-click="selectColor('Black')"><br>
+        </div>
+
+        <div class="JMS-lostAnimalPattern">
+            <h3>Pattern of Animal</h3><br>
+            <div  ng-repeat="pattern in animalCoatPatterns">
+                <input type="radio" name="patternOfAnimal" ng-click="selectedPattern( pattern )"> {{pattern}}
+            </div>
+        </div>
+
+        <div class="JMS-lostAnimalHairLength">
+            <h3>Hair Length of Animal</h3><br>
+            <div  ng-repeat="length in animalHairLength" ng-click="selectedHairLength( length )">
+                <input type="radio" name="hairLengthOfAnimal"> {{length}}
+            </div>
+        </div>
+
+        <div class="JMS-lostAnimalSize">
+            <h3>Size of Animal</h3><br>
+            <div  ng-repeat="size in animalSize" >
+                <input type="radio" name="sizeOfAnimal" ng-click="selectedSize( size )"> {{size}}
+            </div>
+        </div>
+        <div class="JMS-lostAnimalMedicalAndInfo">
+
+            <h3>Medical info/Notes</h3><br>
+
+            <textarea id="addLostAnimalContents_medicalNotes"></textarea>
+            <br>
+            <br>
+            <input type="text" id="addLostAnimalContents_lastKnownAddress">
+        </div>
+
+    </div>
+
+    <div class="JMS-userContactInfo" ng-show="checkTab(1)">
+        <h3>Contact Info</h3>
+
+        <button class="btn" ng-click="useCurrentUserAsContactInfo()">User AccountInfo</button>
+        <br>
+        <div class="JMS-contactNameInfo">
+            <span>Zip Code: </span><input type="number" id="addLostAnimalContents_zipCode"><br>
+        </div>
+
+    </div>
+
+    <div class="JMS-tabLostContactIfo">
+        <ul class="nav nav-pills">
+            <li ng-class="{active: checkTab(0)}">
+                <a href ng-click="setTab(0)">Post Info</a>
+            </li>
+            <li ng-class="{active: checkTab(1)}">
+                <a href ng-click="setTab(1)">Contact Info</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="close_modal()">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="postLostAnimal()">Save changes</button>
+    </div>
+
+
+
+
+

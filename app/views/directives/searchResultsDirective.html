@@ -1,0 +1,28 @@
+<div id="searchResults">
+    <div class="col-md-12 text-center">
+        <div class="pin-layout">
+
+            <div ng-repeat="boardSearch in searchArray">
+                <div class="item ui-draggable ui-draggable-disabled ui-state-disabled gridSortable thumbnail" aria-disabled="true">
+                    <div data-component-type="1" class="noContext Module draggable ajax Board boardCoverImage">
+                        <div class="BoardIcons ajax Module">
+                            <h3 class="boardName">
+                                {{boardSearch.name}}
+                            </h3>
+                        </div>
+                        <div data-toggle="modal" data-target="#viewSelectedBoardModal" ng-click="viewPostsInBoard($index)" class="boardCoverWrapper">
+                            <img src="" class="boardCover" style="" alt="{{boardSearch.name}} / {{boardSearch.description}}" />
+                            <img src="" class="boardCover" alt="{{boardSearch.name}} / {{boardSearch.description}} / by {{boardSearch.createdBy}}" />
+                            <div class="PinCount ajax Module">
+                                        <span class="boardPinCount">
+                                            <span class="value">0</span>
+                                            <span class="label">Pins</span>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

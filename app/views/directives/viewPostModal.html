@@ -1,0 +1,41 @@
+
+<div ng-controller="ViewPostCtrl" class="modal fade" id="viewPostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+            </div>
+            <div class="modal-body" >
+                <h2>{{viewPost.name}}</h2><br>
+
+                <img src="{{viewPost.image}}" height="50%" width="100%"><br>
+
+                <div class="JMS-viewPostComment" ng-repeat="comment in viewPost.comments">
+
+                    {{comment}}
+
+                </div>
+                <div class="JMS-leaveNewComment">
+
+                    <textarea id="viewPostModal_newComment"></textarea><br>
+                    <button ng-click="submitNewComment()">Submit Comment</button>
+
+                </div>
+
+                <div ng-if="showMap">
+
+                    <ui-gmap-google-map id="lostPetMap" center="map.center" zoom="map.zoom" >
+
+                        <ui-gmap-marker  coords='lostPetCoordinates.point' idkey="true">
+
+                        </ui-gmap-marker>
+
+                    </ui-gmap-google-map>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

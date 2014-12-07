@@ -1,0 +1,49 @@
+<div class="modal fade" id="pinPostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="PinPostCtrl as create">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" >Pick a Board</h4>
+            </div>
+            <div class="modal-body">
+                <div class="ajax BoardEditBase Module BoardCreate inModal">
+                    <h1 class="pinFormHeader">
+                        Pick a board
+                    </h1>
+                    <div class="Module PinDupWarning"></div>
+                    <div class="Module ui-PinPreview">
+                        <img src="{{viewPost.image}}" style="" />
+                    </div>
+                    <form class="form-horizontal" role="form" method="post">
+                        <div style="display:none">{{message}}</div>
+                        <div class="form-group">
+                            <h3>
+                                <label for="boardName" class="col-sm-2 control-label">Board</label>
+                            </h3>
+                            <div class="col-sm-10">
+                                <select ng-model="myBoard" class="ajax CategoriesSelect ui-Select Module selectpicker" name="category" class="form-control" id="boardName" ng-options="board.name for board in boardList">
+                                    <span class="caret"></span>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h3>
+                                <label for="postDescription" class="col-sm-2 control-label">Description</label>
+                            </h3>
+                            <div class="col-sm-10">
+                                <textarea id="postDescription" class="form-control Module ui-TextField ui-Field has-value"  name="description" style="width: 90%;">{{viewPost.description}}
+                                </textarea>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="pinPost()">Pin It</button>
+            </div>
+        </div>
+
+    </div>
+</div>

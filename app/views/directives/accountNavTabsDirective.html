@@ -1,0 +1,30 @@
+<div class="UserInfoBar InfoBarBase centeredWithinWrapper infoBar Module ajax gridWidth infoBar">
+    <div class="divider centeredWithinWrapper gridWidth">
+        <hr />
+    </div>
+    <div class="tabs">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#boards" role="tab" data-toggle="tab" ng-click="clearLowerData()">
+                    {{boardList.length}} Boards
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#pins" role="tab" data-toggle="tab" ng-click="clearLowerData()">
+                    {{myPostList.length}} Pins
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#likes" role="tab" data-toggle="tab" ng-click="clearLowerData()">
+                    {{likedPostList.length}} Likes
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#followers" role="tab" data-toggle="tab" ng-click="clearLowerData()">{{followersList.length}} Followers</a>
+            </li>
+            <li role="presentation">
+                <a href="#following" role="tab" data-toggle="tab" ng-click="clearLowerData()">{{followingList.length}} Following</a>
+            </li>
+        </ul>
+    </div>
+</div>

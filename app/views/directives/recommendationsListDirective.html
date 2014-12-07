@@ -1,0 +1,37 @@
+<div id="recommendationsDiv">
+    <!--id="JMS-recommendationTitle" -->
+    <h1>Recommendations</h1><br>
+    <!-- class="JMS-recommendations" -->
+    <div class="col-md-12 text-center">
+        <div class="pin-layout">
+            <!--<button ng-click='fillRecommendationsList()'>Fill Recommendations</button>-->
+            <!-- class="deckgrid" -->
+            <div ng-repeat="pulledPost in postRecommendations">
+                <!-- class="photo ng-scope" -->
+                <div class="thumbnail">
+
+                    <!--<div class="photo-wrapper">-->
+
+                    <img src="{{pulledPost.image}}" data-ng-src="{{pulledPost.image}}" class="animation-fade animation-faded" ng-click="viewSelectedPost( $index )" data-imageloaded="" data-loadedclass="animation-faded" data-toggle="modal" data-target="#viewPostModal">
+
+                    <!--</div>
+
+                    <div class="photo-description">-->
+
+                    <h3 class="ng-binding">{{pulledPost.name}}</h3>
+                    <p class="ng-binding">{{pulledPost.description}}</p>
+                    <br>
+                    <p class="ng-binding">{{pulledPost.createdBy}}</p>
+                    <button id= "moj-followButton" class="ng-binding" ng-click="followUser(pulledPost.createdBy)">Follow</button>
+                    <!--<button class="ng-binding" ng-click="deletePost( pulledPost, $index )">DELETE POST </button>-->
+                    <button class="ng-binding" ng-click="likePost( pulledPost )">Like</button>
+
+                    <button data-toggle="modal" data-target="#pinPostModal" ng-click="viewSelectedPost( $index )">
+                        <span> Pin It</span>
+                    </button>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

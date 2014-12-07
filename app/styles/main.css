@@ -1,0 +1,430 @@
+/* Space out content a bit */
+/* GKG css start */
+.pin-layout{
+  column-count: 4;
+  column-gap: 0px;
+  -moz-column-count: 4;
+  -moz-column-gap: 0px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 0px;
+}
+.thumbnail{
+  display: inline-block;
+  margin:5px;
+  padding:5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #ccc; 
+  background: #fff;
+}
+/* GKG css end */
+
+.moj-boxShot img{
+  position: relative;
+  overflow:hidden;
+  position: absolute;
+  display: block;
+  border: none;
+  width: 166px;
+  height: 236px;
+}
+
+.moj-sliderButton{
+  box-sizing: border-box;
+  background-color:#F8F8F8 ;
+  display: none;
+  height: 100%;
+  margin-top: 0;
+  max-height: 250px;
+  width: 70px;
+}
+.moj-arrow:hover, .slider-button:hover {
+  cursor: pointer;
+}
+#signup_firstName{
+width: 200px;
+float: left;
+margin-left: 140px;
+margin-top: 1px;
+position: relative;
+    }
+	
+#signup_lastName{
+margin-left: 350px;
+width: 240px;
+margin-top: 40px;
+    }
+#signup_email{
+ width: 450px;
+ margin-left: 140px;
+
+}
+#signup_username{
+width: 450px;
+margin-left: 140px;
+}
+#signup_password{
+width: 220px;
+float: left;
+margin-left: 140px;
+}
+#signup_confirmPassword{
+ width: 220px;
+ margin-left: 370px;
+}
+#signup_submit{
+width: 450px;
+margin-left: 140px;
+}
+#signup_zipCode{
+width: 450px;
+ margin-left: 140px;
+ }
+
+.pull-left {
+font-size: 20px;
+margin-left: 100px;
+margin-top: 0px;
+margin-bottom: 200px;
+}
+#login_username{
+width: 400px;
+float: left;
+ margin-left: 170px;
+ margin-top: 150px;
+}
+#login_password{
+width: 400px;
+float: left;
+margin-left: 170px;
+margin-top: 10px;
+}
+#login_submit{
+width: 400px;
+float: left;
+ margin-left: 170px;
+margin-top: 10px;
+}
+.pull-left{
+font-size: 20px;
+margin-left: 170px;
+}
+.pull-right{
+font-size: 20px;
+margin-right: 70px;
+}
+a {
+    color:#191970;
+    text-decoration:none;
+}
+a:visited {
+    color:#0000FF;
+}
+#moj-followButton{
+background-color: #ab171e;
+border-bottom-color: #820a0f;
+border-left-color: #9a1015;
+border-right-color: #9a1015;
+border-top-color: #af151b;
+border-style: solid;
+border-width: 1px;
+box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
+color: #fff;
+text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
+}
+/*ANY CSS YOU ADD PLEASE PREFIX WITH YOUR INITIALS THEN A DASH EX: JWR-(CLASS OR ID NAME)  */
+#JMS-recommendationTitle
+{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+#JMS-likePostDeckgrid
+{
+    position: absolute;
+    top: 65%;
+    left: 15%;
+}
+#JMS-likedPostTitle
+{
+    position: absolute;
+    top: 55%;
+    left: 15%;
+}
+.JMS-addSpace
+{
+    padding:6px;
+}
+.JMS-addPost
+{
+    position: absolute;
+    right: 0%;
+    top: 10%;
+}
+
+.JMS-actionTitle
+{
+    position: absolute;
+    top: 50%;
+    width: 6%;
+    left: 56%;
+}
+.JMS-categoryTitle
+{
+    position: absolute;
+    width: 6%;
+    left: 6%;
+}
+.JMS-addCategoryTags
+{
+    position: absolute;
+    top: 60%;
+    left: 3%;
+    width: 20%;
+}
+.JMS-addActionTags
+{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    width: 20%;
+}
+
+.angular-google-map-container
+{
+    height: 400px;
+
+
+}
+
+.JMS-lostAnimalFileUpload
+{
+
+}
+.JMS-LostAnimalColorOptions
+{
+
+}
+. JMS-lostAnimalCategory
+{
+
+}
+.JMS-lostAnimalPattern
+{
+
+}
+.JMS-lostAnimalHairLength
+{
+
+}
+.JMS-lostAnimalSize
+{
+
+}
+.JMS-lostAnimalMedicalAndInfo
+{
+
+}
+.JMS-viewPostComment
+{
+
+}
+.JMS-addMoreTags
+{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+}
+.JMS-likedPosts
+{
+    position: absolute;
+    left: 10%;
+    top: 65%;
+    overflow-x:scroll;
+
+    max-height: 250px;
+    width: 100%;
+    background-color:lightgreen;
+}
+.JMS-recommendations
+{
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    overflow-x:auto;
+    max-height: 250px;
+    width: 100%;
+    background-color:lightblue;
+
+}
+.JMS-myPosts
+{
+
+}
+.JMS-centerTitle
+{
+   position: absolute;
+   margin-left: 170px;
+   left: 24%;
+   font-size: 40px;
+   margin-top:0px;
+}
+.moj-centerTitle{
+position: absolute;
+   margin-left: 170px;
+   left: 27%;
+   font-size: 40px;
+   margin-top:70px;
+   }
+  .MOJ-centerTitle{
+  position: absolute;
+   margin-left: 170px;
+   left: 30%;
+   font-size: 40px;
+   margin-top:200px;
+  }
+
+.JMS-center
+{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+.JMS-display-list
+{
+    border: solid 3px #bbbbbb;
+
+    width: 100%;
+}
+.JMS-categoryList
+{
+    border: solid #000000 1px;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 20%;
+
+}
+.JMS-categoryList-cell
+{
+
+
+    width: 100%;
+}
+.JMS-selectedTags
+{
+    position: absolute;
+    top: 15%;
+    left: 55%;
+}
+#categorySelection_submitButton
+{
+    position: absolute;
+    top: 80%;
+    left: 80%;
+}
+
+.moj-body{
+ background-image: url("pet-background.jpg");
+ }
+ .moj-login{
+  background-image: url("pet-background.jpg");
+  }
+ .moj-dashbackground{
+  background: url('wood-bg.jpg')no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+#moj-board{
+width: 1200px;
+background: url(cork_board.gif) no-repeat;
+background-size: 1200px 1500px;
+padding-top: 80px;
+padding-left: 0px;
+padding-right: 50px;
+}
+ #moj-pin {
+width: 30px;
+height: 30px;
+position: relative;
+z-index: 10;
+}
+
+
+
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+/*.header,*/
+/*.marketing,*/
+/*.footer {*/
+  /*padding-left: 15px;*/
+  /*padding-right: 15px;*/
+/*}*/
+
+/* Custom page header */
+/*.header {*/
+  /*border-bottom: 1px solid #e5e5e5;*/
+/*}*/
+/* Make the masthead heading the same height as the navigation */
+/*.header h3 {*/
+  /*margin-top: 0;*/
+  /*margin-bottom: 0;*/
+  /*line-height: 40px;*/
+  /*padding-bottom: 19px;*/
+/*}*/
+
+/* Custom page footer */
+/*.footer {*/
+  /*padding-top: 19px;*/
+  /*color: #777;*/
+  /*border-top: 1px solid #e5e5e5;*/
+/*}*/
+
+/* Customize container */
+/*@media (min-width: 768px) {*/
+  /*.container {*/
+    /*max-width: 730px;*/
+  /*}*/
+/*}*/
+/*.container-narrow > hr {*/
+  /*margin: 30px 0;*/
+/*}*/
+
+/* Main marketing message and sign up button */
+/*.jumbotron {*/
+  /*text-align: center;*/
+  /*border-bottom: 1px solid #e5e5e5;*/
+/*}*/
+/*.jumbotron .btn {*/
+  /*font-size: 21px;*/
+  /*padding: 14px 24px;*/
+/*}*/
+
+/* Supporting marketing content */
+/*.marketing {*/
+  /*margin: 40px 0;*/
+/*}*/
+/*.marketing p + h4 {*/
+  /*margin-top: 28px;*/
+/*}*/
+
+/* Responsive: Portrait tablets and up */
+/*@media screen and (min-width: 768px) {*/
+  /* Remove the padding we set earlier */
+  /*.header,*/
+  /*.marketing,*/
+  /*.footer {*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+  /*}*/
+  /* Space out the masthead */
+  /*.header {*/
+    /*margin-bottom: 30px;*/
+  /*}*/
+  /* Remove the bottom border on the jumbotron for visual effect */
+  /*.jumbotron {*/
+    /*border-bottom: 0;*/
+  /*}*/
+/*}*/
