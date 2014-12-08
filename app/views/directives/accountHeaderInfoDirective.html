@@ -5,22 +5,34 @@
                 <div class="titleBar centeredWithinWrapper gridWidth">
                     <br>
                     <br>
+                    <br>
+                    <br>
+
+
                     <div class="fixedHeaderNameAndImage" style="bottom: 70px;">
                         <div class="fixedHeaderName" itemprop="name">
                             {{username}}
                         </div>
+
                     </div>
                     <div class="buttons">
-                        <button ng-click="editUserCategoriesAndActions()" type="button" data-loadedclass="animation-faded" data-toggle="modal" data-target="#addCategoriesAndActions" class=" ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
-                            <span class="buttonText" >Add Categories</span>
-                        </button>
-                        <button  type="button" class="editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
-                            <a href="manageProfile.html" class="buttonText">Edit Profile</a>
-                        </button>
-                        <button href="dashboard.html" type="button" class="editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
-                            <a href="dashboard.html" class="buttonText">Dashboard</a>
-                        </button>
 
+                        <a href="categorySelection.html">
+                            <button  type="button" data-loadedclass="animation-faded" data-toggle="modal" data-target="#addCategoriesAndActions" class=" ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                                <span class="buttonText" >Add Categories</span>
+                            </button>
+                        </a>
+                        <a href="manageProfile.html">
+                            <button  type="button" class="editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                                <span class="buttonText">Edit Profile</span>
+                            </button>
+                        </a>
+
+                        <a href="dashboard.html">
+                            <button type="button" class="editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                                <span class="buttonText">Dashboard</span>
+                            </button>
+                        </a>
 
 
                     </div>

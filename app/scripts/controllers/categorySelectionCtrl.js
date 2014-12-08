@@ -9,7 +9,7 @@
  */
 var app = angular.module('peterestApp');
 
-app.controller('CatSelCtrl', function ($scope, $location)
+app.controller('CatSelCtrl', function ($scope, $location, $interval)
 {
     $scope.test = 'test cat sel controller';
 
@@ -25,6 +25,33 @@ app.controller('CatSelCtrl', function ($scope, $location)
 
     $scope.selectedCategoriesUserLikes = [];
     $scope.selectedActionsUserLikes = [];
+
+    var c;
+    $scope.message="This DIV is refreshed "+c+" time.";
+    $interval(function()
+    {
+        $scope.message="This DIV is refreshed "+c+" time.";
+        c++;
+    },1000);
+    $scope.getUserTagsForAddingTags = function()
+    {
+        var currUser = Parse.User.current();
+
+        var cats = currUser.get('likedCategories');
+        var actions = currUser.get('likedActions');
+        if(!angular.isUndefined(cats) && !angular.isUndefined(actions))
+        {
+            var i = 0;
+            for(; i < cats.length; i++)
+            {
+                $scope.tags.push(cats[i]);
+            }
+            for(; i < actions.length; i++)
+            {
+                $scope.tags.push(actions[i]);
+            }
+        }
+    };
 
     $scope.saveActionsAndCategoriesToDatabase = function()
     {
@@ -236,4 +263,5 @@ app.controller('CatSelCtrl', function ($scope, $location)
     $scope.getSelectedCategoriesOfAnimals();
     $scope.getSelectedAction();
 
+    $scope.getUserTagsForAddingTags();
 });

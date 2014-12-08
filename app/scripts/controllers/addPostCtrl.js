@@ -5,6 +5,7 @@ app.controller('AddPostCtrl', function ($location, $scope, $modal)
     $scope.availableActionsOfAnimals = [];
     $scope.availableCategoriesOfAnimals = [];
 
+    $scope.showAddPost = false;
     $scope.userBoards = [];
 
     $scope.selectedBoardAddPost = null;
@@ -57,6 +58,14 @@ app.controller('AddPostCtrl', function ($location, $scope, $modal)
             {
                 success: function(results)
                 {
+                    if(results.length > 0)
+                    {
+                        $scope.showAddPost = true;
+                    }
+                    else
+                    {
+                        $scope.showAddPost = false;
+                    }
                     $scope.userBoards = results;
                 },
                 error: function(error) {

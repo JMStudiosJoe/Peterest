@@ -281,6 +281,11 @@ app.controller('DashCtrl', function ($scope, $location, $interval)
 
     };
 
+    $scope.logoutUser = function()
+    {
+        user = null;
+
+    };
     $scope.fillRecommendationsList();
 
     $scope.fillLostAnimalPosts();

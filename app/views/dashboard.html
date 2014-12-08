@@ -25,6 +25,8 @@
     <script>
         Parse.initialize("tpXum9bDKsYU5fWMR9nKsD2W9Y97VY6PEkdCNZZC", "rH6f6fEncHvsXGzNrG9wsqOKpcKIoCxVnhUpbcwP");
 
+        var userGetRecommendations = Parse.User.current();
+        var usernameForCloud = userGetRecommendations.get('username');
         Parse.Cloud.run('filterPosts', {},
                 {
                     success: function(result)
