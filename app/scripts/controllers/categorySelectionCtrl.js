@@ -39,14 +39,16 @@ app.controller('CatSelCtrl', function ($scope, $location, $interval)
 
         var cats = currUser.get('likedCategories');
         var actions = currUser.get('likedActions');
+        console.log(cats);
+        console.log(actions);
         if(!angular.isUndefined(cats) && !angular.isUndefined(actions))
         {
             var i = 0;
-            for(; i < cats.length; i++)
+            for(i = 0; i < cats.length; i++)
             {
                 $scope.tags.push(cats[i]);
             }
-            for(; i < actions.length; i++)
+            for(i = 0; i < actions.length; i++)
             {
                 $scope.tags.push(actions[i]);
             }
@@ -212,6 +214,7 @@ app.controller('CatSelCtrl', function ($scope, $location, $interval)
         if($scope.selectingCategoryItems)
         {
             var selectedCategory = $scope.availableCategoriesOfAnimals[selectedItemIndex];
+            console.log(selectedCategory);
             selectedCategory = selectedCategory.attributes.name;
             var index = $scope.selectedCategoriesUserLikes.indexOf(selectedCategory);
             var tagIndex = $scope.tags.indexOf(selectedCategory);

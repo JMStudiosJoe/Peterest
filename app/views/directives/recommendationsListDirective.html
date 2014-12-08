@@ -24,12 +24,10 @@
                     <p class="ng-binding">{{pulledPost.createdBy}}</p>
                     <button id= "moj-followButton" class="ng-binding" ng-click="followUser(pulledPost.createdBy)">Follow</button>
                     <!--<button class="ng-binding" ng-click="deletePost( pulledPost, $index )">DELETE POST </button>-->
-                    <button class="ng-binding" ng-click="likePost( pulledPost )">Like</button>
+                    <button class="ng-binding" ng-click="likePost( pulledPost )"> <span class="glyphicon glyphicon-heart"></span> Like</button>
 
-                    <button data-toggle="modal" data-target="#pinPostModal" ng-click="viewSelectedPost( $index )">
-                        <span> Pin It</span>
-                    </button>
-                    <!--</div>-->
+                    <button id="moj-pinIt" data-toggle="modal" data-target="#pinPostModal" ng-click="viewSelectedPost( $index )">
+                    </button>                   <!--</div>-->
                 </div>
             </div>
         </div>

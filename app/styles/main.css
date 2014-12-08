@@ -553,7 +553,19 @@ div #moj-ani {
     width: 100px;
 
 }
-
+#moj-parrot{
+    background-image: url('feather.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#moj-color
+{
+    background-color: rgba(135, 139, 131, 0.93);
+}
 
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
