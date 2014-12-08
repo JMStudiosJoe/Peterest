@@ -20,8 +20,8 @@
                     </div>
                     <!-- data-target="#viewSelectedBoardModal" -->
                     <div data-toggle="modal" ng-click="viewPostsInBoard($index)" class="boardCoverWrapper">
-                        <img src="" class="boardCover" style="" alt="{{board.name}} / {{board.description}}" />
-                        <img src="" class="boardCover" alt="{{board.name}} / {{board.description}} / by {{board.createdBy}}" />
+                        <img src="{{board.mainImage}}"  class="boardCover" style="" alt="{{board.name}} / {{board.description}}" />
+                        <img  src="{{board.mainImage}}" class="boardCover" alt="{{board.name}} / {{board.description}} / by {{board.createdBy}}" />
                         <div class="PinCount ajax Module">
                                                         <span class="boardPinCount">
                                                             <span class="value">0</span>

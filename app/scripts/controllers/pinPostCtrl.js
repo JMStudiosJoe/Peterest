@@ -69,6 +69,7 @@ app.controller('PinPostCtrl', function ($scope, $window, $interval)
         if (currentUser)
         {
 
+            console.log('AM I EVEN BEING CALLED???');
             $scope.boardName = angular.element(document.getElementById('boardName')).val();
             $scope.postDescription = angular.element(document.getElementById('postDescription')).val();
 
@@ -79,6 +80,11 @@ app.controller('PinPostCtrl', function ($scope, $window, $interval)
             var relationToBoardPosts = selectedBoardPinPost.relation('posts');
             relationToBoardPosts.add($scope.viewPostParse);
             //var viewPostID = $scope.viewPost.postID;
+
+            var imageObject = $scope.viewPostParse.get('image');
+            var image = imageObject.url();
+
+            selectedBoardPinPost.set('displayImage', image);
 
 
             //console.log(relationToBoardPosts);

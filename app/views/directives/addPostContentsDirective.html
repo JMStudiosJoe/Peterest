@@ -1,46 +1,70 @@
-
-
-    <input type="file" id="animalPhoto" class="btn btn-lg btn-primary">
+<div>
+    <input type="file" id="animalPhoto" class="btn btn-sm btn-primary" style="margin-top:10px">
 
     <div>
+        <h3 style="margin-top:10px">Title</h3>
         <input type="text" id="addPostContents_nameOfPost">
     </div>
     <div>
-        <textarea id="addPostContents_descriptionOfPost">Description of animal</textarea>
+        <h3 style="margin-top:10px">Description</h3>
+        <textarea id="addPostContents_descriptionOfPost"
+                  style="width: 100%; height: 150px">Description of animal</textarea>
     </div>
 
-    <br>
-    <div ng-repeat="board in userBoards">
 
 
-        <span ng-click="userSelectsBoardToPinPost( $index )">{{board.attributes.name}}</span>
+    <table id="q-add-post-table">
+        <tr>
+            <td><h3>Add to boards:</h3></td>
+            <td><h3>Animal categories:</h3></td>
+            <td><h3>Actions:</h3></td>
+        </tr>
+        <tr>
+            <td>
+                <div ng-repeat="board in userBoards">
+                    <input type="checkbox"
+                           id="boards_checkbox"
+                           ng-click="userSelectsBoardToPinPost( $index )">
+                    {{board.attributes.name}}
+                    </input>
+                    <!-- <span ng-click="userSelectsBoardToPinPost( $index )">{{board.attributes.name}}</span> -->
+                </div>
+            </td>
 
-    </div>
-    <br>
-    <!--<button ng-click="getCatOfSelAnimals()">Get Data</button>-->
-    <br>
-    <div class="JMS-addCategoryTags">
-        <div  ng-repeat="catOfAnimal in availableCategoriesOfAnimals">
+            <!--<button ng-click="getCatOfSelAnimals()">Get Data</button>-->
+            <td>
+                <div>
 
+                    <div  ng-repeat="catOfAnimal in availableCategoriesOfAnimals">
+                        <input type="checkbox"
+                               id="addPostContents_categoryOfAnimal{{$index}}"
+                               ng-click="addSelectedCategory( $index )">
+                        {{catOfAnimal.attributes.name}}
+                        </input>
 
-            <input type="checkbox" id="addPostContents_categoryOfAnimal{{$index}}" ng-click="addSelectedCategory( $index )">{{catOfAnimal.attributes.name}}
+                    </div>
+                </div>
+            </td>
 
-        </div>
-    </div>
+            <td>
+                <div>
 
-    <br>
-    <h3 class="JMS-actionTitle">Actions</h3>
-    <br>
-    <div class="JMS-addActionTags">
-        <div ng-repeat="actionsOfAnimal in availableActionsOfAnimals">
+                    <div ng-repeat="actionsOfAnimal in availableActionsOfAnimals">
+                        <input type="checkbox"
+                               id="addPostContents_actionsOfAnimal{{$index}}"
+                               ng-click="addSelectedAction( $index )">
+                        {{actionsOfAnimal.attributes.name}}
+                        </input>
+                    </div>
+                </div>
+            </td>
 
+        </tr>
+    </table>
 
-            <input type="checkbox" id="addPostContents_actionsOfAnimal{{$index}}" ng-click="addSelectedAction( $index )">{{actionsOfAnimal.attributes.name}}
-
-        </div>
-    </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" ng-click="close_modal()">Close</button>
         <button type="button" class="btn btn-primary" ng-click="createNewPost()">Save changes</button>
     </div>
 
+</div>

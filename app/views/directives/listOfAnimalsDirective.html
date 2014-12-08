@@ -1,0 +1,9 @@
+<div id="moj-scroll" class="JMS-categoryList">
+    <div ng-repeat="data in dataToDisplay">
+        <div class="JMS-categoryList-cell" ng-click="selectedItemFromDispalyList($index)">
+            <h4 id="listOfAnimals_data_{{$index}}">{{data.attributes.name}}</h4>
+        </div>
+    </div>
+    <button id="listOfAnimals_previousButton" ng-click="chooseCategoriesOfAnimals()"><span class="glyphicon glyphicon-chevron-left"></span>Previous</button>
+    <button id="listOfAnimals_nextButton" ng-click="chooseActionsOfAnimals()">Next<span class="glyphicon glyphicon-chevron-right"></span></button>
+</div>

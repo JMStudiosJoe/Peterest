@@ -1,5 +1,5 @@
 var app = angular.module('peterestApp');
-
+//../views/directives/addNewPostModalDirective.html
 app.controller('AddPostCtrl', function ($location, $scope, $modal)
 {
     $scope.availableActionsOfAnimals = [];
@@ -7,14 +7,9 @@ app.controller('AddPostCtrl', function ($location, $scope, $modal)
 
     $scope.userBoards = [];
 
-    $scope.animalCoatPatterns = ['Stripe', 'Spotted', 'Solid Color'];
-    $scope.animalHairLength = ['Long', 'Medium', 'Short'];
-    $scope.animalSize = ['Large 75+lbs', 'Medium 50 - 75lbs', 'Small 15 - 50lbs', 'Extra Small 0 - 15lbs'];
-
     $scope.selectedBoardAddPost = null;
 
 
-    $scope.test = 'what the fuck?????';
     $scope.openMod = function()
     {
         console.log("We're in the right place");
@@ -37,6 +32,7 @@ app.controller('AddPostCtrl', function ($location, $scope, $modal)
 
     //$scope.selectedBoardAddPost = $scope.userBoards[index];
     //console.log($scope.selectedBoardAddPost);
+
     $scope.setTab = function(setTabThing)
     {
         //console.log('setTab' + setTab);
@@ -128,15 +124,14 @@ app.controller('modal_helper', function ($location, $scope, $modalInstance, avai
     $scope.selectedCategoriesOfNewPost = [];
     $scope.selectedActionsOfNewPost = [];
 
-    console.log('wat');
-    console.log(availableActionsOfAnimals);
-    console.log(availableCategoriesOfAnimals);
-    console.log(userBoards);
     $scope.availableActionsOfAnimals = availableActionsOfAnimals;
     $scope.availableCategoriesOfAnimals = availableCategoriesOfAnimals;
     $scope.selectedBoard = null;
     $scope.userBoards = userBoards;
 
+    $scope.animalCoatPatterns = ['Stripe', 'Spotted', 'Solid Color'];
+    $scope.animalHairLength = ['Long', 'Medium', 'Short'];
+    $scope.animalSize = ['Large 75+lbs', 'Medium 50 - 75lbs', 'Small 15 - 50lbs', 'Extra Small 0 - 15lbs'];
 
 
 
@@ -144,8 +139,8 @@ app.controller('modal_helper', function ($location, $scope, $modalInstance, avai
 
     $scope.userSelectsBoardToPinPost = function( index )
     {
-        console.log('da fuck?');
 
+        $scope.selectedBoardAddPost = $scope.userBoards[index];
         $scope.selectedBoard = $scope.userBoards[index];
         console.log($scope.selectedBoard);
     };
@@ -195,11 +190,10 @@ app.controller('modal_helper', function ($location, $scope, $modalInstance, avai
     $scope.createNewPost = function()
     {
 
-        console.log('make it herere');
         var currentUser = Parse.User.current();
         if (currentUser)
         {
-            console.log('make it herere');
+
             $scope.tags = [];
             //var likeCats = $scope.selectedCategoriesUserLikes;
             //var likeActions = $scope.selectedActionsUserLikes;
@@ -221,9 +215,12 @@ app.controller('modal_helper', function ($location, $scope, $modalInstance, avai
             //get the image file
             var fileUploadControl = $("#animalPhoto")[0];
 
-            if(fileUploadControl.files.length > 0 && $scope.selectedActionsOfNewPost.length != 0 && $scope.selectedCategoriesOfNewPost.length != 0 && $scope.nameOfPost.length != 0 && $scope.descriptionOfPost.length != 0)
+            console.log(fileUploadControl.files);
+            //fileUploadControl.files.length > 0 &&
+            if( $scope.selectedActionsOfNewPost.length != 0 && $scope.selectedCategoriesOfNewPost.length != 0 && $scope.nameOfPost.length != 0 && $scope.descriptionOfPost.length != 0)
             {
                 //alert('about to upload');
+                console.log('ahhhhhhh');
                 var file = fileUploadControl.files[0];
                 var name = "photo.jpg";
 

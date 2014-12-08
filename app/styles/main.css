@@ -1,116 +1,144 @@
 /* Space out content a bit */
 /* GKG css start */
+.JMS-centerTabs
+{
+    position: absolute;
+    width:421px;
+    left: 33%;
+}
+.JMS-searchResults
+{
+    position: absolute;
+    top: 36%;
+}
+a:active
+{
+   color: #ffffff;
+}
+a:link
+{
+    color: #ffffff;
+}
+.JMS-tabContentDash
+{
+    position: absolute;
+    top:30%;
+    overflow-y: scroll;
+}
+/* Space out content a bit */
+/* GKG css start */
 .pin-layout{
-  column-count: 4;
-  column-gap: 0px;
-  -moz-column-count: 4;
-  -moz-column-gap: 0px;
-  -webkit-column-count: 4;
-  -webkit-column-gap: 0px;
+    column-count: 4;
+    column-gap: 0px;
+    -moz-column-count: 4;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 0px;
 }
 .thumbnail{
-  display: inline-block;
-  margin:5px;
-  padding:5px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px #ccc; 
-  background: #fff;
+    display: inline-block;
+    margin:5px;
+    padding:5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #ccc;
+    background: #fff;
 }
 /* GKG css end */
 
 .moj-boxShot img{
-  position: relative;
-  overflow:hidden;
-  position: absolute;
-  display: block;
-  border: none;
-  width: 166px;
-  height: 236px;
+    position: relative;
+    overflow:hidden;
+    position: absolute;
+    display: block;
+    border: none;
+    width: 166px;
+    height: 236px;
 }
 
 .moj-sliderButton{
-  box-sizing: border-box;
-  background-color:#F8F8F8 ;
-  display: none;
-  height: 100%;
-  margin-top: 0;
-  max-height: 250px;
-  width: 70px;
+    box-sizing: border-box;
+    background-color:#F8F8F8 ;
+    display: none;
+    height: 100%;
+    margin-top: 0;
+    max-height: 250px;
+    width: 70px;
 }
 .moj-arrow:hover, .slider-button:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 #signup_firstName{
-width: 200px;
-float: left;
-margin-left: 140px;
-margin-top: 1px;
-position: relative;
-    }
-	
+    width: 200px;
+    /* float: left; */
+    margin-left: 140px;
+    margin-top: 1px;
+    position: absolute;
+    top: 6%;
+}
+
 #signup_lastName{
-margin-left: 350px;
-width: 240px;
-margin-top: 40px;
-    }
+    margin-left: 350px;
+    width: 240px;
+    margin-top: 40px;
+}
 #signup_email{
- width: 450px;
- margin-left: 140px;
+    width: 450px;
+    margin-left: 140px;
 
 }
 #signup_username{
-width: 450px;
-margin-left: 140px;
+    width: 450px;
+    margin-left: 140px;
 }
 #signup_password{
-width: 220px;
-float: left;
-margin-left: 140px;
+    width: 220px;
+    float: left;
+    margin-left: 140px;
 }
 #signup_confirmPassword{
- width: 220px;
- margin-left: 370px;
+    width: 220px;
+    margin-left: 370px;
 }
 #signup_submit{
-width: 450px;
-margin-left: 140px;
+    width: 450px;
+    margin-left: 140px;
 }
 #signup_zipCode{
-width: 450px;
- margin-left: 140px;
- }
+    width: 450px;
+    margin-left: 140px;
+}
 
 .pull-left {
-font-size: 20px;
-margin-left: 100px;
-margin-top: 0px;
-margin-bottom: 200px;
+    font-size: 20px;
+    margin-left: 150px;
+    margin-top: 0px;
+    margin-bottom: 200px;
 }
 #login_username{
-width: 400px;
-float: left;
- margin-left: 170px;
- margin-top: 150px;
+    margin-top: 10px;
 }
-#login_password{
-width: 400px;
-float: left;
-margin-left: 170px;
-margin-top: 10px;
+#login_passwordf{
+
+    margin-top: 10px;
 }
 #login_submit{
-width: 400px;
-float: left;
- margin-left: 170px;
-margin-top: 10px;
+    margin-top: 10px;
 }
+
+#login-table {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    width:60%;
+}
+
 .pull-left{
-font-size: 20px;
-margin-left: 170px;
+    font-size: 20px;
+    float:left;
 }
 .pull-right{
-font-size: 20px;
-margin-right: 70px;
+    font-size: 20px;
+    float:right;
 }
 a {
     color:#191970;
@@ -120,16 +148,16 @@ a:visited {
     color:#0000FF;
 }
 #moj-followButton{
-background-color: #ab171e;
-border-bottom-color: #820a0f;
-border-left-color: #9a1015;
-border-right-color: #9a1015;
-border-top-color: #af151b;
-border-style: solid;
-border-width: 1px;
-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
-color: #fff;
-text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
+    background-color: #ab171e;
+    border-bottom-color: #820a0f;
+    border-left-color: #9a1015;
+    border-right-color: #9a1015;
+    border-top-color: #af151b;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.34);
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
 }
 /*ANY CSS YOU ADD PLEASE PREFIX WITH YOUR INITIALS THEN A DASH EX: JWR-(CLASS OR ID NAME)  */
 #JMS-recommendationTitle
@@ -262,26 +290,143 @@ text-shadow: 0 -1px rgba(0, 0, 0, 0.11);
 }
 .JMS-centerTitle
 {
-   position: absolute;
-   margin-left: 170px;
-   left: 24%;
-   font-size: 40px;
-   margin-top:0px;
+    position: absolute;
+    margin-left: 170px;
+    left: 24%;
+    font-size: 40px;
+    margin-top:0px;
 }
+
+.q-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.q-center-obj {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.q-content-wrapper{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.q-manage-table {
+    size: 80%;
+    float:left;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.q-manage-body {
+    background-color: #E9E9E9;
+    height: 100%;
+}
+
+.q-highlight1 {
+    background-color: red;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+.q-image {
+    border-radius: 8px;
+}
+
+.q-highlight2 {
+    background-color: red;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+#q-welcome {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    padding-top: 5px;
+
+    display:block;
+    width:100%;
+    background:#d50000;
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.5, rgb(213,0,0)),
+            color-stop(0.51, rgb(221,49,49)),
+            color-stop(1, rgb(234,130,130))
+    );
+
+    background-image: -moz-linear-gradient(
+            center bottom,
+            rgb(213,0,0) 50%,
+            rgb(221,49,49) 51%,
+            rgb(234,130,130) 100%);
+
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+
+    border:#c30000 1px solid;
+}
+
+@media (max-width: 1300px) {
+    .float-right {
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+        max-width: 425px;
+    }
+
+    .q-manage-table {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+}
+
+#q-add-post-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
 .moj-centerTitle{
-position: absolute;
-   margin-left: 170px;
-   left: 27%;
-   font-size: 40px;
-   margin-top:70px;
-   }
-  .MOJ-centerTitle{
-  position: absolute;
-   margin-left: 170px;
-   left: 30%;
-   font-size: 40px;
-   margin-top:200px;
-  }
+    position: absolute;
+    margin-left: 170px;
+    left: 27%;
+    font-size: 40px;
+    margin-top:70px;
+}
+.MOJ-centerTitle{
+    position: absolute;
+    margin-left: 170px;
+    left: 30%;
+    font-size: 40px;
+    margin-top:200px;
+}
 
 .JMS-center
 {
@@ -324,34 +469,87 @@ position: absolute;
 }
 
 .moj-body{
- background-image: url("pet-background.jpg");
- }
- .moj-login{
-  background-image: url("pet-background.jpg");
-  }
- .moj-dashbackground{
-  background: url('wood-bg.jpg')no-repeat 50% 50% fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  }
+    background-image: url("pet-background.jpg");
+}
+.moj-login{
+    background-image: url("pet-background.jpg");
+}
+.moj-dashbackground{
+    background: url('wood-bg.jpg')no-repeat 50% 50% fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 #moj-board{
-width: 1200px;
-background: url(cork_board.gif) no-repeat;
-background-size: 1200px 1500px;
-padding-top: 80px;
-padding-left: 0px;
-padding-right: 50px;
+    width: 1200px;
+    background: url(cork_board.gif) no-repeat;
+    background-size: 1200px 1500px;
+    padding-top: 80px;
+    padding-left: 0px;
+    padding-right: 50px;
 }
- #moj-pin {
-width: 30px;
-height: 30px;
-position: relative;
-z-index: 10;
+#moj-pin {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 10;
 }
+#moj-pinIt{
+    width: 50px;
+    height: 22px;
+    display: inline;
+    font-style: italic;
+    background: url('http://bakedinthesouth.com/wp-content/uploads/2012/07/PinIt.jpg') -195px -193px no-repeat;
+    background-size: 40px 30px;
+    background-position: center;
+    text-align: center;
+}
+#moj-scroll{
+    overflow-y: scroll;
+    width: 300px;
+    margin-top:-50px;
+    background-color:#F8F8F8 ;
+}
+div #moj-ani {
+    display:list-item;
+    list-style-image: url('bullet.png');
+    color: Red;
+    font-weight: bold;
+    font-size: 25px;
+}
+.JMS-selectedTags{
+}
+#listOfAnimals_previousButton{
+    width: 100px;
+}
+#listOfAnimals_nextButton{
+    width: 100px;
+}
+#categorySelection_addCategory{
+}
+.JMS-addMoreTags{
+    margin-left: 60px;
+}
+.moj-registerTitle{
+    position: absolute;
+    margin-left: 320px;
+    left: 27%;
+    font-size: 40px;
+    margin-top:10px;
+}
+.greenboard{
+    background-image: url('mouse.jpg');
+    background-position: right;
+    width: 100px;
+    height:600px;
+}
+#categorySelection_submitButton{
+    margin-right: 200px;
+    background-color: #00FF7F;
+    width: 100px;
 
-
+}
 
 
 
@@ -359,72 +557,72 @@ z-index: 10;
 /*.header,*/
 /*.marketing,*/
 /*.footer {*/
-  /*padding-left: 15px;*/
-  /*padding-right: 15px;*/
+/*padding-left: 15px;*/
+/*padding-right: 15px;*/
 /*}*/
 
 /* Custom page header */
 /*.header {*/
-  /*border-bottom: 1px solid #e5e5e5;*/
+/*border-bottom: 1px solid #e5e5e5;*/
 /*}*/
 /* Make the masthead heading the same height as the navigation */
 /*.header h3 {*/
-  /*margin-top: 0;*/
-  /*margin-bottom: 0;*/
-  /*line-height: 40px;*/
-  /*padding-bottom: 19px;*/
+/*margin-top: 0;*/
+/*margin-bottom: 0;*/
+/*line-height: 40px;*/
+/*padding-bottom: 19px;*/
 /*}*/
 
 /* Custom page footer */
 /*.footer {*/
-  /*padding-top: 19px;*/
-  /*color: #777;*/
-  /*border-top: 1px solid #e5e5e5;*/
+/*padding-top: 19px;*/
+/*color: #777;*/
+/*border-top: 1px solid #e5e5e5;*/
 /*}*/
 
 /* Customize container */
 /*@media (min-width: 768px) {*/
-  /*.container {*/
-    /*max-width: 730px;*/
-  /*}*/
+/*.container {*/
+/*max-width: 730px;*/
+/*}*/
 /*}*/
 /*.container-narrow > hr {*/
-  /*margin: 30px 0;*/
+/*margin: 30px 0;*/
 /*}*/
 
 /* Main marketing message and sign up button */
 /*.jumbotron {*/
-  /*text-align: center;*/
-  /*border-bottom: 1px solid #e5e5e5;*/
+/*text-align: center;*/
+/*border-bottom: 1px solid #e5e5e5;*/
 /*}*/
 /*.jumbotron .btn {*/
-  /*font-size: 21px;*/
-  /*padding: 14px 24px;*/
+/*font-size: 21px;*/
+/*padding: 14px 24px;*/
 /*}*/
 
 /* Supporting marketing content */
 /*.marketing {*/
-  /*margin: 40px 0;*/
+/*margin: 40px 0;*/
 /*}*/
 /*.marketing p + h4 {*/
-  /*margin-top: 28px;*/
+/*margin-top: 28px;*/
 /*}*/
 
 /* Responsive: Portrait tablets and up */
 /*@media screen and (min-width: 768px) {*/
-  /* Remove the padding we set earlier */
-  /*.header,*/
-  /*.marketing,*/
-  /*.footer {*/
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
-  /*}*/
-  /* Space out the masthead */
-  /*.header {*/
-    /*margin-bottom: 30px;*/
-  /*}*/
-  /* Remove the bottom border on the jumbotron for visual effect */
-  /*.jumbotron {*/
-    /*border-bottom: 0;*/
-  /*}*/
+/* Remove the padding we set earlier */
+/*.header,*/
+/*.marketing,*/
+/*.footer {*/
+/*padding-left: 0;*/
+/*padding-right: 0;*/
+/*}*/
+/* Space out the masthead */
+/*.header {*/
+/*margin-bottom: 30px;*/
+/*}*/
+/* Remove the bottom border on the jumbotron for visual effect */
+/*.jumbotron {*/
+/*border-bottom: 0;*/
+/*}*/
 /*}*/

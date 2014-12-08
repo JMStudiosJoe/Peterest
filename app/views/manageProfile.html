@@ -1,0 +1,157 @@
+<!doctype html>
+<html ng-app="peterestApp" ng-controller="ManageProfileCtrl as account" >
+<head>
+    <meta charset="utf-8">
+    <title>PetPinterest</title>
+    <script src="//www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!--<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"> -->
+
+    <!-- Latest compiled and minified JavaScript
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/simplex/bootstrap.min.css"/>
+    <script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/bundle1.css">
+    <link rel="stylesheet" href="../styles/bundle2.css">
+    <link rel="stylesheet" href="../styles/bundle3.css">
+    <link rel="stylesheet" href="../bower_components/ngDialog/css/ngDialog-theme-default.css">
+    <!--<link rel="stylesheet" href="../styles/deckgrid.css">-->
+    <!-- endbuild -->
+
+
+    <script>
+        Parse.initialize("tpXum9bDKsYU5fWMR9nKsD2W9Y97VY6PEkdCNZZC", "rH6f6fEncHvsXGzNrG9wsqOKpcKIoCxVnhUpbcwP");
+    </script>
+
+</head>
+
+<body>
+
+<div class="q-content-wrapper">
+    <div class="q-center" style="padding-top:50px">
+        <hgroup id="q-welcome">
+            <h1>Edit your profile</h1>
+        </hgroup>
+    </div>
+</div>
+
+<div class="q-manage-body" style="padding-top:25px">
+    <div class="q-content-wrapper">
+
+        <div class="float-right">
+            <img class="q-image" src="../styles/manageProfile.jpg" />
+        </div>
+
+        <table class="q-manage-table">
+            <tr>
+                <td class="q-highlight1">User name</td>
+                <td>{{username}}</td>
+                <td><input type="text" id="user_name" value=""/></td>
+            </tr>
+            <tr>
+                <td class="q-highlight2">Email address</td>
+                <td>{{email}}</td>
+                <td><input type="text" id="email" value=""/></td>
+            </tr>
+            <tr>
+                <td class="q-highlight1">Zip code</td>
+                <td>{{zipCode}}</td>
+                <td><input type="text" id="zip_code" value=""/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="password-change-submit"
+                            ng-click="changeProfile()"
+                            class="ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                        Change profile
+                    </button>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="q-highlight1">Old password</td>
+                <td></td>
+                <td><input type="password" id="old_password" value =""/></td>
+            </tr>
+            <tr>
+                <td class="q-highlight2">New password</td>
+                <td></td>
+                <td><input type="password" id="new_password" value =""/></td>
+            </tr>
+            <tr>
+                <td class="q-highlight1">Confirm new password</td>
+                <td></td>
+                <td><input type="password" id="confirm_password" value =""/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button id="password-change-submit"
+                            ng-click="changePassword()"
+                            class="ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                        Change password
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <button id="password-change-submit"
+
+                class="ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+           <a href="dashboard.html">Back to Dashboard</span>
+        </button>
+    </div>
+</div> <!-- end content wrapper -->
+
+
+
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="../../bower_components/es5-shim/es5-shim.js"></script>
+<script src="../../bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="../../bower_components/jquery/dist/jquery.js"></script>
+<script src="../../bower_components/angular/angular.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../../bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="../../bower_components/angular-resource/angular-resource.js"></script>
+<script src="../../bower_components/angular-route/angular-route.js"></script>
+<script src="../../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../../bower_components/angular-touch/angular-touch.js"></script>
+<script src="../../bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="../../bower_components/lodash/dist/lodash.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<!-- q: required scripts -->
+<script src="../scripts/app.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+<script src="../scripts/controllers/manageProfileCtrl.js"></script>
+<!-- endbuild -->
+</body>
+</html>

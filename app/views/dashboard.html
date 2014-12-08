@@ -2,7 +2,7 @@
 <html class="no-js">
 <head>
     <meta charset="utf-8">
-    <title>PetPinterest</title>
+    <title>Peterest</title>
     <script src="//www.parsecdn.com/js/parse-1.3.0.min.js"></script>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -14,11 +14,14 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="../styles/main.css">
-    <!-- endbuild -->
-    <script>
-        Parse.initialize("tpXum9bDKsYU5fWMR9nKsD2W9Y97VY6PEkdCNZZC", "rH6f6fEncHvsXGzNrG9wsqOKpcKIoCxVnhUpbcwP");
+    <link rel="stylesheet" href="../styles/bundle1.css">
+    <link rel="stylesheet" href="../styles/bundle2.css">
+    <link rel="stylesheet" href="../styles/bundle3.css">
 
-    </script>
+
+
+    <!-- endbuild -->
+
     <script>
         Parse.initialize("tpXum9bDKsYU5fWMR9nKsD2W9Y97VY6PEkdCNZZC", "rH6f6fEncHvsXGzNrG9wsqOKpcKIoCxVnhUpbcwP");
 
@@ -37,20 +40,50 @@
 
     </script>
 </head>
-<body ng-app="peterestApp">
+<body ng-app="peterestApp" class="moj-dashbackground">
 <div ng-controller="DashCtrl">
     <dash-header></dash-header>
-    <rec-list></rec-list>
-    <lost-posts></lost-posts>
-    <search-results></search-results>
 
-    <div class="JMS-addPost">
-
-
-        <view-post></view-post>
-        <pin-post></pin-post>
+    <br>
+    <br>
+    <br>
+    <h1 id="q-welcome">Welcome to Peterest</h1><br>
+    <br>
+    <div class="tabs JMS-centerTabs"  id="tabs">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#recommendations" role="tab" data-toggle="tab" ng-click="clearLowerData()">
+                    <h3>Recommendations</h3>
+                </a>
+            </li>
+            <li role="presentation">
+                <a href="#animals" role="tab" data-toggle="tab" ng-click="clearLowerData()">
+                    <h3>Lost Animals</h3>
+                </a>
+            </li>
+        </ul>
 
     </div>
+    <div class="tab-content JMS-tabContentDash" id="tab-content">
+        <!--role="tabpanel" class="tab-pane active"-->
+        <div class="tab-pane active" id="recommendations">
+
+            <rec-list></rec-list>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="animals">
+            <div id="lostAnimalDiv">
+                 <lost-posts></lost-posts>
+            </div>
+        </div>
+    </div>
+
+
+
+    <view-post></view-post>
+    <pin-post></pin-post>
+
+    <search-results></search-results>
+
 </div>
 
 
