@@ -4,13 +4,16 @@ app.controller('ViewPostCtrl', function ($location, $scope, $window)
 {
     $scope.test = 'logic';
 
+
     $scope.submitNewComment = function()
     {
         var newComment = angular.element(document.getElementById('viewPostModal_newComment'));
 
-        console.log($scope.viewPost + ':::::' + newComment.val());
+        var currUsername = Parse.User.current().get('username');
+        var fullComment = currUsername+ ' : ' + newComment.val();
+        console.log($scope.viewPost + ':::::' + fullComment);
 
-        $scope.viewPost['comments'].push(newComment.val());
+        $scope.viewPost['comments'].push(fullComment);
 
         var viewPostID = $scope.viewPost.postID;
 
@@ -19,7 +22,7 @@ app.controller('ViewPostCtrl', function ($location, $scope, $window)
         query.get(viewPostID, {
             success: function(post)
             {
-                post.add('comments', newComment.val());
+                post.add('comments', fullComment);
                 post.save();
                 alert('Comment saved');
                 $window.location.reload();

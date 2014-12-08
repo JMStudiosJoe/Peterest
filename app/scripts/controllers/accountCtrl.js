@@ -88,6 +88,7 @@ app.controller('AccountCtrl', function ($scope, $window, $interval)
                                 name: object.get('name'),
                                 description: object.get('description'),
                                 image: imageObject.url(),
+                                comments: object.get('comments'),
                                 createdBy: object.attributes.createdBy
                             });
                         }
@@ -138,6 +139,7 @@ app.controller('AccountCtrl', function ($scope, $window, $interval)
                                     name: object.get('name'),
                                     description: object.get('description'),
                                     image: imageObject.url(),
+                                    comments: object.get('comments'),
                                     createdBy: object.attributes.createdBy
                                 });
                             }

@@ -16,7 +16,7 @@
 {
     position: absolute;
     top:30%;
-    overflow-y: scroll;
+
 }
 /* Space out content a bit */
 /* GKG css start */
@@ -475,7 +475,7 @@ a:visited {
 .moj-dashbackground{
     background: url('wood-bg.jpg');
     background-repeat: repeat;
-    height: 3500px;
+    height: 100%;
     width: 100%;
     /*
     -webkit-background-size: cover;
