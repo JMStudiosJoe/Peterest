@@ -9,8 +9,16 @@
  */
 var app = angular.module('peterestApp');
 
-app.controller('SignupCtrl',['$scope', '$location', function ($scope, $location)
+app.controller('SignupCtrl',['$scope', '$location', '$modal', function ($scope, $location, $modal)
 {
+    $scope.openCategory = function()
+    {
+        console.log("We're in the right place");
+        console.log("$modal = ", $modal);
+        $scope.modalInstance = $modal.open({templateUrl: "../views/directives/categoryModalDirective.html", controller: "modal_helper2", size: "lg"});
+        console.log("modalInstance = ", $scope.modalInstance);
+    };
+
     $scope.signupNewUser = function()
     {
         var name = angular.element( document.querySelector( '#signup_firstName' ) ).val();
@@ -39,13 +47,7 @@ app.controller('SignupCtrl',['$scope', '$location', function ($scope, $location)
                     {
                         success: function(user)
                         {
-
-                            //console.log($location.path());
-                            //$location.path('/select');
-                            //console.log($location.path());
-
-                            window.location.href = '../views/categorySelection.html';
-
+                            $scope.openCategory();
                         },
                         error: function(user, error)
                         {
@@ -53,7 +55,7 @@ app.controller('SignupCtrl',['$scope', '$location', function ($scope, $location)
                             alertText = alertText + error.message + '. ';
                             alertFlag = true;
                             //alert(error.message);
-                            console.log('Error: ' + error.code + ' ' + error.message);
+                            //console.log('Error: ' + error.code + ' ' + error.message + ' ' + alertFlag + ' ' + alertText);
                         }
                     });
             }
@@ -90,14 +92,20 @@ app.controller('SignupCtrl',['$scope', '$location', function ($scope, $location)
                 alertFlag = true;
                 //alert('Email is empty');
             }
-        }
+        };
 
         if(alertFlag)
         {
             alert(alertText);
         }
-    };
-
-
+    }
 
 }]);
+
+app.controller('modal_helper2', function ($location, $scope, $modalInstance)
+{
+    $scope.close_modal = function()
+    {
+        $modalInstance.close('cancel')
+    };
+});

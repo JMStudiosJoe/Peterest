@@ -16,12 +16,11 @@
 
                     </div>
                     <div class="buttons">
-
-                        <a href="categorySelection.html">
-                            <button  type="button" data-loadedclass="animation-faded" data-toggle="modal" data-target="#addCategoriesAndActions" class=" ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
+                        <div ng-controller="SignupCtrl" >
+                            <button  type="button" ng-click="openCategory()" class=" ng-binding editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
                                 <span class="buttonText" >Add Categories</span>
                             </button>
-                        </a>
+                        </div>
                         <a href="manageProfile.html">
                             <button  type="button" class="editProfile hasText rounded ShowModalButton Button primary Module ajax btn">
                                 <span class="buttonText">Edit Profile</span>
