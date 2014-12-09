@@ -34,6 +34,65 @@ app.controller('DashCtrl', function ($scope, $location, $interval)
         c++;
     },1000);
 
+    $scope.likePost = function(likePostId)
+    {
+        //$scope.addToFollowers();
+        console.log(likePostId.postID);
+        var Posts = Parse.Object.extend('Posts');
+        var postToLike = new Parse.Query(Posts);
+        postToLike.get(likePostId.postID,
+            {
+                success: function(likePost)
+                {
+                    // The object was retrieved successfully.
+                    console.log('retrieved object' + likePost.id);
+                    var user = Parse.User.current();
+                    var relation = user.relation('likedPosts');
+                    relation.add(likePost);
+                    alert('Added to your liked posts.');
+                    user.save();
+                },
+                error: function(object, error)
+                {
+                    console.log(error);
+                    // The object was not retrieved successfully.
+                    // error is a Parse.Error with an error code and message.
+                }
+            });
+
+
+    };
+    $scope.addToFollowers = function()
+    {
+            var follower = Parse.Object.extend('Followers');
+            var query2 = new Parse.Query(follower);
+            query2.equalTo('username', usernameToFollow)
+            query2.first({
+                success: function(user)
+                {
+                    if(angular.isUndefined(user) || user == null)
+                    {
+                        console.log('user is null or undefined');
+                        var newRow = new follower();
+                        newRow.set('username', usernameToFollow);
+                        var newArray = [currentUser.get('username')];
+                        newRow.set('followers', newArray);
+                        newRow.save();
+                        console.log('new row added');
+                    }
+                    else
+                    {
+                        console.log(user.get('username'));
+                        user.addUnique('followers', currentUser.get('username'));
+                        user.save();
+                    }
+                },
+                error: function(error) {
+                    alert('Error: ' + error.code + '' + error.message);
+                }
+            });
+
+    };
     $scope.viewSelectedPost = function(index)
     {
         console.log('making it here???');

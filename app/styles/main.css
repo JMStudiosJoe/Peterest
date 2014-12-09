@@ -16,7 +16,7 @@
 {
     position: absolute;
     top:30%;
-    overflow-y: scroll;
+
 }
 /* Space out content a bit */
 /* GKG css start */
@@ -108,14 +108,17 @@
     margin-bottom: 200px;
 }
 #login_username{
-    margin-top: 10px;
+    width: 450px;
+    margin-left: 140px;
 }
-#login_passwordf{
+#login_password{
 
-    margin-top: 10px;
+    width: 450px;
+    margin-left: 140px;
 }
 #login_submit{
-    margin-top: 10px;
+    width: 450px;
+    margin-left: 140px;
 }
 
 #login-table {
@@ -132,6 +135,7 @@
 .pull-right{
     font-size: 20px;
     float:right;
+    margin-right: 97px;
 }
 a {
     color:#191970;
@@ -290,6 +294,11 @@ a:visited {
     margin-top:0px;
 }
 
+.q-img {
+    max-height: 800px;
+    max-width: 500px;
+}
+
 .q-center {
     margin-left: auto;
     margin-right: auto;
@@ -405,13 +414,27 @@ a:visited {
     border-collapse: separate;
     border-spacing: 10px;
 }
-
+.moj-centerLast
+{
+    width: 350px;
+    margin-left: 150px;
+}
 .moj-centerTitle{
     position: absolute;
     margin-left: 170px;
     left: 27%;
     font-size: 40px;
     margin-top:70px;
+    width: 350px;
+
+}
+#moj-centerTitle{
+    position: absolute;
+    margin-left: 170px;
+    left: 27%;
+    font-size: 40px;
+    margin-top:70px;
+
 }
 .MOJ-centerTitle{
     position: absolute;
@@ -468,19 +491,27 @@ a:visited {
     background-image: url("pet-background.jpg");
 }
 .moj-dashbackground{
-    background: url('wood-bg.jpg')no-repeat 50% 50% fixed;
+    background: url('wood-bg.jpg');
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+    /*
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    */
 }
 #moj-board{
     width: 1200px;
     background: url(cork_board.gif) no-repeat;
     background-size: 1200px 1500px;
     padding-top: 80px;
-    padding-left: 0px;
+    padding-left: 100px;
     padding-right: 50px;
+    margin-left: 150px;
+
+
 }
 #moj-pin {
     width: 30px;
@@ -542,7 +573,19 @@ div #moj-ani {
     width: 100px;
 
 }
-
+#moj-parrot{
+    background-image: url('feather.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#moj-color
+{
+    background-color: rgba(135, 139, 131, 0.93);
+}
 
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
